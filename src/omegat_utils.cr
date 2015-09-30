@@ -1,9 +1,9 @@
-require "./docs_translation_helper/*"
+require "./omegat_utils/*"
 require "option_parser"
 
-# crystal build src/docs_translation_helper.cr && ./docs_translation_helper -s ~/Dropbox/Documents/Translations/OmegaT\ Projects/crystal-jp-gh-pages-omegat/target/crystal-jp-gh-pages -d ~/Dropbox/Documents/Translations/Repositories/crystal-jp-gh-pages
+# crystal build src/omegat_utils.cr && ./omegat_utils -s ~/Dropbox/Documents/Translations/OmegaT\ Projects/crystal-jp-gh-pages-omegat/target/crystal-jp-gh-pages -d ~/Dropbox/Documents/Translations/Repositories/crystal-jp-gh-pages
 
-module DocsTranslationHelper
+module OmegatUtils
 
   def self.copy_back_md_to_repo(src_dir, dst_dir)
     Dir.glob(src_dir + "/*") do |f|
@@ -49,4 +49,4 @@ unless File.directory?(dst_dir)
   exit 1
 end
 
-DocsTranslationHelper.copy_back_md_to_repo(src_dir, dst_dir)
+OmegatUtils.copy_back_md_to_repo(src_dir, dst_dir)
