@@ -1,9 +1,9 @@
-require "./omegat_utils/*"
+require "./omegatribute/*"
 require "option_parser"
 
-# crystal build src/omegat_utils.cr && ./omegat_utils -s ~/Dropbox/Documents/Translations/OmegaT\ Projects/crystal-jp-gh-pages-omegat/target/crystal-jp-gh-pages -d ~/Dropbox/Documents/Translations/Repositories/crystal-jp-gh-pages
+# crystal build src/omegatribute.cr && ./omegatribute -s ~/Dropbox/Documents/Translations/OmegaT\ Projects/crystal-jp-gh-pages-omegat/target/crystal-jp-gh-pages -d ~/Dropbox/Documents/Translations/Repositories/crystal-jp-gh-pages
 
-module OmegatUtils
+module Omegatribute
 
   def self.copy_back_md_to_repo(src_dir, dst_dir)
     Dir.glob(src_dir + "/*") do |f|
@@ -49,4 +49,4 @@ unless File.directory?(dst_dir)
   exit 1
 end
 
-OmegatUtils.copy_back_md_to_repo(src_dir, dst_dir)
+Omegatribute.copy_back_md_to_repo(src_dir, dst_dir)

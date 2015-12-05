@@ -1,2 +1,2 @@
 require "spec"
-require "../src/omegat_utils"
+require "../src/omegatribute"

@@ -1,6 +1,6 @@
 require "./spec_helper"
 
-describe OmegatUtils do
+describe Omegatribute do
   # TODO: Write tests
 
   it "works" do
