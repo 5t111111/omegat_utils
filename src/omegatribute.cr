@@ -1,4 +1,5 @@
 require "./omegatribute/*"
+require "colorize"
 
 module Omegatribute
 
@@ -9,8 +10,8 @@ module Omegatribute
       end
       next unless File.extname(f) == ".md"
       dst_file = File.join(dst_dir, File.basename(f))
-      puts "FROM: #{f}"
-      puts "TO: #{dst_file}"
+      puts "FROM: #{f}".colorize(:cyan)
+      puts "TO:   #{dst_file}".colorize(:magenta)
       Dir.mkdir_p(File.dirname(dst_file))
       File.write(dst_file, File.read(f))
     end
@@ -24,8 +25,8 @@ module Omegatribute
       end
       next unless File.extname(f) == ".md"
       dst_file = File.join(dst_dir, File.basename(f))
-      puts "FROM: #{f}"
-      puts "TO: #{dst_file}"
+      puts "FROM: #{f}".colorize(:cyan)
+      puts "TO:   #{dst_file}".colorize(:magenta)
       File.write(dst_file, File.read(f))
     end
   end
